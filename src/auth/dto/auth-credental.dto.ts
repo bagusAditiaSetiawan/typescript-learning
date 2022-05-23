@@ -1,12 +1,12 @@
-import { IsNotEmpty, IsString, MinLength } from "class-validator";
+import { IsNotEmpty, IsString, MinLength } from 'class-validator';
 
+export class AuthCredentalDto {
+  @IsString()
+  @IsNotEmpty()
+  @MinLength(8)
+  username: string;
 
-export class AuthCredentalDto{
-    @IsString()
-    @IsNotEmpty()
-    @MinLength(8)
-    username: string;
-
-    @IsNotEmpty()
-    password: string;
+  @IsNotEmpty()
+  @MinLength(8)
+  password: string;
 }
